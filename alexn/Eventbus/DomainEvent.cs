@@ -1,4 +1,4 @@
-﻿namespace alexn.EventHandling
+﻿namespace alexn.Eventbus
 {
     public interface IDomainEvent
     {

@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Eventbus\DomainEvent.cs" />
-    <Compile Include="Eventbus\IEvent.cs" />
+    <Compile Include="Eventbus\IEventDispatcher.cs" />
     <Compile Include="Eventbus\IHandle.cs" />
     <Compile Include="Extensions\CollectionExtensions.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
