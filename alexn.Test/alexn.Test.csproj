@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CollectionExtensions.cs" />
     <Compile Include="DateTimeExtensions.cs" />
+    <Compile Include="EnumerationExtensions.cs" />
     <Compile Include="EventBusTest.cs" />
     <Compile Include="GuardAgainst.cs" />
     <Compile Include="IntegerExtensions.cs" />

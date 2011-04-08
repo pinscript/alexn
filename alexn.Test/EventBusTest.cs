@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
-using alexn.EventHandling;
+using alexn.Eventbus;
 using NUnit.Framework;
 
 namespace alexn.Test

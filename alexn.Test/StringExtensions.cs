@@ -18,5 +18,13 @@ namespace alexn.Test
         {
             Assert.AreEqual("acbd18db4cc2f85cedef654fccc4a4d8", "foo".Md5());
         }
+
+        [Test]
+        public void Test_In()
+        {
+            var items = new[] { "Foo", "Bar", "Baz" };
+            Assert.IsTrue("Foo".In(items));
+            Assert.IsFalse("alexn".In(items));
+        }
     }
 }
