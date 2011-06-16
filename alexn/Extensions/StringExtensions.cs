@@ -1,4 +1,7 @@
-﻿using System.Security.Cryptography;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -35,7 +38,7 @@ namespace alexn.Extensions
 
         public static string ToSlug(this string instance, int length = 50)
         {
-            Guard.Against.NullOrEmpty(instance);
+            Guard.Against.NullOrEmpty(instance, "instance");
 
             var slug = instance.ToLower().Trim();
 
@@ -60,7 +63,7 @@ namespace alexn.Extensions
         /// <returns></returns>
         public static string RemoveAccent(this string instance)
         {
-            Guard.Against.NullOrEmpty(instance);
+            Guard.Against.NullOrEmpty(instance, "instance");
 
             var buffer = Encoding.GetEncoding("Cyrillic").GetBytes(instance);
             return Encoding.ASCII.GetString(buffer);
@@ -80,6 +83,17 @@ namespace alexn.Extensions
                 sb.Append(hash[i].ToString("x2"));
             }
             return sb.ToString();
+        }
+
+        public static bool In(this string instance, IEnumerable<string> list)
+        {
+            return list.Contains(instance);
+        }
+
+        public static T ToEnum<T>(this string value) where T : struct {
+            Guard.Against.NullOrEmpty(value, "value");
+
+            return (T)Enum.Parse(typeof(T), value, true);
         }
     }
 }

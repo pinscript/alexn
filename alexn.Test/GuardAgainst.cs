@@ -21,19 +21,19 @@ namespace alexn.Test
         [Test, ExpectedException(typeof(ArgumentNullException))]
         public void NullOrEmpty_Throws_For_Empty_String()
         {
-            Guard.Against.NullOrEmpty("");
+            Guard.Against.NullOrEmpty("", "dummy");
         }
 
         [Test, ExpectedException(typeof(ArgumentNullException))]
         public void NullOrEmpty_Throws_For_Empty_List()
         {
-            Guard.Against.NullOrEmpty(new string[] {});
+            Guard.Against.NullOrEmpty(new string[] {}, "dummy");
         }
 
         [Test]
         public void NullOrEmpty_Does_Not_Throw_For_List()
         {
-            Guard.Against.NullOrEmpty(new[] { "alexander", "nyquist" });
+            Guard.Against.NullOrEmpty(new[] { "alexander", "nyquist" }, "dummy");
         }
     }
 }

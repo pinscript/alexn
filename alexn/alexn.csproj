@@ -40,19 +40,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DynamicDictionary.cs" />
+    <Compile Include="Collections\PriorityQueue.cs" />
+    <Compile Include="Domain\EntityBase.cs" />
     <Compile Include="Eventbus\DomainEvent.cs" />
     <Compile Include="Eventbus\IEventDispatcher.cs" />
     <Compile Include="Eventbus\IHandle.cs" />
     <Compile Include="Extensions\CollectionExtensions.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\EnumerationExtensions.cs" />
     <Compile Include="Extensions\IntegerExtensions.cs" />
+    <Compile Include="Extensions\NullableExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Guard.cs" />
+    <Compile Include="Helpers\SystemTime.cs" />
+    <Compile Include="Mail\EmailSender.cs" />
+    <Compile Include="Mail\IEmailSender.cs" />
+    <Compile Include="Mail\SmtpConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

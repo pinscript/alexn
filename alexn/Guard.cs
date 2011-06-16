@@ -14,16 +14,16 @@ namespace alexn
                     throw new ArgumentNullException();
             }
 
-            public static void NullOrEmpty(string instance)
+            public static void NullOrEmpty(string instance, string parameterName)
             {
                 if (instance.IsNullOrEmpty())
-                    throw new ArgumentNullException();
+                    throw new ArgumentNullException(parameterName);
             }
 
-            public static void NullOrEmpty<T>(IEnumerable<T> instance)
+            public static void NullOrEmpty<T>(IEnumerable<T> instance, string parameterName)
             {
                 if (instance.IsNullOrEmpty())
-                    throw new ArgumentNullException();
+                    throw new ArgumentNullException(parameterName);
             }
         }
     }
