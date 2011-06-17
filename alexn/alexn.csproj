@@ -41,11 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DynamicDictionary.cs" />
-    <Compile Include="Collections\PriorityQueue.cs" />
     <Compile Include="Domain\EntityBase.cs" />
     <Compile Include="Eventbus\DomainEvent.cs" />
     <Compile Include="Eventbus\IEventDispatcher.cs" />
     <Compile Include="Eventbus\IHandle.cs" />
+    <Compile Include="Eventbus\StaticEventDispatcher.cs" />
     <Compile Include="Extensions\CollectionExtensions.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Extensions\EnumerationExtensions.cs" />
